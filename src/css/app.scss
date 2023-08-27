@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    --size-xs: 4px;
+    --size-sm: 8px;
+    --size-md: 16px;
+    --size-lg: 24px;
+    --size-xl: 42px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.k-focus__helper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    background-color: transparent;
+    border-radius: inherit;
+    transition: background-color 0.2s cubic-bezier(0.25, 0.8, 0.5, 1),
+        opacity 0.4s cubic-bezier(0.25, 0.8, 0.5, 1);
+
+    &:hover {
+        background-color: rgba($color: #fff, $alpha: 0.25);
+        opacity: 1;
+    }
+}
